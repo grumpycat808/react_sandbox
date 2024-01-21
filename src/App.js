@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React, { useEffect, useState } from "react";
+import { getData } from "./getData";
+export default function App(props) {
+  const [messages, setMessages] = useState([]);
+  useEffect(() => {
+    getData().then((response) => setMessages(response.data));
+    console.log("messages", messages);
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Test</h1>
+      {messages && messages.length > 0 && <p>{messages[0].name}</p>}
     </div>
   );
 }
-
-export default App;
