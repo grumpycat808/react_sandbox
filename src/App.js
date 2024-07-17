@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import "animate.css";
-import StarRating from "./StarRating";
+import StarRating2 from "./StarRating2";
 export default function App(props) {
   const [inputVal, setInputVal] = useState("");
   const animateCSS = (element, animation, prefix = "animate__") =>
@@ -24,15 +24,15 @@ export default function App(props) {
   // myelement.addEventListener("mouseover", animateCSS(".my-element", "bounce"));
   // This handler will be executed only once when the cursor
   // moves over the unordered list
-  const onChange = (index) => setFilledStars(index);
+  const onChange = (index) => setFilledStars(index + 1);
 
   return (
     <div className="App">
-      <StarRating
+      <StarRating2
         filled={filledStars}
         maxStars={5}
         onChange={onChange}
-      ></StarRating>
+      ></StarRating2>
     </div>
   );
 }

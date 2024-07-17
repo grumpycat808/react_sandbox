@@ -7,7 +7,9 @@ body {
     height: var(--icon-size);
     width: var(--icon-size);
   }
-  
+  .star-icon:hover {
+    cursor: pointer;
+  }
   .star-icon-filled {
     fill: yellow;
   }
