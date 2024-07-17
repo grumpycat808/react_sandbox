@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import "animate.css";
 import StarRating2 from "./StarRating2";
+import Todo from "./Todo";
 export default function App(props) {
   const [inputVal, setInputVal] = useState("");
   const animateCSS = (element, animation, prefix = "animate__") =>
@@ -28,11 +29,7 @@ export default function App(props) {
 
   return (
     <div className="App">
-      <StarRating2
-        filled={filledStars}
-        maxStars={5}
-        onChange={onChange}
-      ></StarRating2>
+      <Todo></Todo>
     </div>
   );
 }
