@@ -1,10 +1,10 @@
 import React from "react";
 import "./styles.css";
-function ProgressBar({ percentage }) {
+function ProgressBar({ percentage, order }) {
   const progressBarStyle = {
-    width: `${percentage}%`,
-
+    width: `0%`,
     animationDuration: "2s",
+    animationDelay: `${order * 2}s`,
     animationName: "slidein",
     animationFillMode: "forwards",
   };

@@ -30,7 +30,9 @@ export default function App(props) {
 
   return (
     <div className="App">
-      <ProgressBar percentage={35}></ProgressBar>
+      <ProgressBar percentage={35} order={0}></ProgressBar>
+      <ProgressBar percentage={55} order={1}></ProgressBar>
+      <ProgressBar percentage={65} order={2}></ProgressBar>
     </div>
   );
 }
