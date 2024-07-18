@@ -2,15 +2,37 @@ body {
     font-family: sans-serif;
   }
   
-  .star-icon {
-    --icon-size: 32px;
-    height: var(--icon-size);
-    width: var(--icon-size);
-  }
-  .star-icon:hover {
-    cursor: pointer;
-  }
-  .star-icon-filled {
-    fill: yellow;
-  }
+.star-icon {
+  --icon-size: 32px;
+  height: var(--icon-size);
+  width: var(--icon-size);
+}
+.star-icon:hover {
+  cursor: pointer;
+}
+.star-icon-filled {
+  fill: yellow;
+}
   
+.progress-bar {
+  background-color: red;
+  width: 100%;
+}
+.percentage {
+  background-color: #0d6efd;
+}
+
+.App {
+  width: 60%;
+  margin: 0 auto;
+}
+
+@keyframes slidein {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}

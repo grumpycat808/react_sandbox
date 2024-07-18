@@ -6,6 +6,7 @@ function Todo() {
   const [todoList, setTodoList] = useState(["Walk the dog", "Laundry"]);
   const addTodo = () => {
     setTodoList([...todoList, newTodo]);
+    setNewTodo("");
   };
 
   const removeTodo = (index) => {

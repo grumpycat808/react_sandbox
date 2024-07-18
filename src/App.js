@@ -3,6 +3,7 @@ import "./App.css";
 import "animate.css";
 import StarRating2 from "./StarRating2";
 import Todo from "./Todo";
+import ProgressBar from "./ProgressBar";
 export default function App(props) {
   const [inputVal, setInputVal] = useState("");
   const animateCSS = (element, animation, prefix = "animate__") =>
@@ -29,7 +30,7 @@ export default function App(props) {
 
   return (
     <div className="App">
-      <Todo></Todo>
+      <ProgressBar percentage={35}></ProgressBar>
     </div>
   );
 }
